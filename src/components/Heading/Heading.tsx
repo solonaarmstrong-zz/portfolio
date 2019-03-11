@@ -1,5 +1,5 @@
 import React from 'react';
-import {Color} from '../../types';
+import {Color, Font} from '../../types';
 import './Heading.css';
 
 type HeadingElement = 'h1' | 'h2' | 'h3' | 'h4';
@@ -7,11 +7,12 @@ type HeadingElement = 'h1' | 'h2' | 'h3' | 'h4';
 interface Props {
     element: HeadingElement;
     color: Color;
+    font: Font;
     children: string;
 }
 
-function Heading({element: Element = 'h2', color, children}: Props) {
-    const className = `Heading Heading-${color}`;
+function Heading({element: Element = 'h2', color, font, children}: Props) {
+    const className = `Heading Heading-${color} Heading-${font}`;
 
     return <Element className={className}>{children}</Element>;
 }

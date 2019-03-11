@@ -3,3 +3,8 @@ export enum Color {
     Blue = 'Blue',
     Black = 'Black',
 }
+
+export enum Font {
+    Montez = 'Montez',
+    Regular = 'Regular',
+}
