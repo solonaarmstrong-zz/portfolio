@@ -1,0 +1,46 @@
+.Skeleton {
+    height: 12px;
+    border-radius: 10px;
+    background: #ddd;
+    background-image: linear-gradient(to right, #ddd 0%, #eee 20%, #ddd 40%, #ddd 100%);
+    background-size: 800px 100px;
+    background-repeat: no-repeat;
+    margin: 8px;
+    animation: shimmer 1.3s infinite;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+}
+
+@keyframes shimmer {
+    0% {
+      background-position: -200px 0;
+    }
+
+    100% {
+        background-position: 500px 0;
+    }
+}
+
+.Skeleton--Long {
+    width: 500px;
+    max-width: 70%;
+}
+.Skeleton--Short {
+    width: 300px;
+    max-width: 50%;
+}
+
+.SkeletonWrapper {
+    width: 500px;
+    max-width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin: auto;
+}
+.SkeletonWrapper--Centered {
+    align-items: center;
+}
+.SkeletonWrapper--Left {
+    align-items: flex-start;
+}
