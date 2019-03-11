@@ -1,25 +1,14 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import Heading from './components/Heading/Heading';
+import {Color, Font} from './types';
 import './App.css';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.tsx</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        <Heading color={Color.Blue} element='h1' font={Font.Montez}>Solona</Heading>
+        <Heading color={Color.Black} element='h3' font={Font.Regular}>Front End Web Developer</Heading>
       </div>
     );
   }
