@@ -1,0 +1,16 @@
+.Paragraph {
+    width: 80%;
+    max-width: 500px;
+}
+
+.Paragraph--medium {
+    font-size: 1.2rem;
+}
+
+.Paragraph--large {
+    font-size: 1.4rem;
+}
+
+.Paragraph--centered {
+    margin: auto;
+}
