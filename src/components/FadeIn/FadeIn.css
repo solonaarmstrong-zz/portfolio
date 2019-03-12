@@ -1,0 +1,12 @@
+.FadeIn-enter {
+    opacity: 0.01;
+}
+
+.FadeIn-enter-active {
+    opacity: 0.01;
+}
+
+.FadeIn-enter-done {
+    opacity: 1;
+    transition: opacity var(--FadeIn-duration) ease-in;
+}

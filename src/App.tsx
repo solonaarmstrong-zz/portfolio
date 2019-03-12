@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Heading from './components/Heading/Heading';
 import Skeleton from './components/Skeleton/Skeleton';
+import FadeIn from './components/FadeIn/FadeIn';
 import {Color, Font} from './types';
 import './App.css';
 
@@ -23,12 +24,18 @@ class App extends Component<Props, State> {
     const {loading} = this.state;
     const summaryMarkup = loading
       ? <Skeleton alignment='Centered' />
-      : "Hey, I'm Solona (pronounced like Barcelona). I'm part coder, part designer, all UX Developer with 10 years experience developing the web.";
+      : <FadeIn duration={400}>Hey, I'm Solona (pronounced like Barcelona).
+        Part coder and part designer with 10 years experience as a web developer.
+        I'm passionate about delightful user experience, accessibility, and performance.</FadeIn>;
 
     return (
       <div className="App">
-        <Heading color={Color.Blue} element='h1' font={Font.Montez}>Solona</Heading>
-        <Heading color={Color.Black} element='h3' font={Font.Regular}>Front End Web Developer</Heading>
+        <FadeIn duration={400}>
+          <Heading color={Color.Blue} element='h1' font={Font.Montez}>Solona</Heading>
+        </FadeIn>
+        <FadeIn duration={600}>
+          <Heading color={Color.Black} element='h3' font={Font.Regular}>Front End Developer</Heading>
+        </FadeIn>
         {summaryMarkup}
       </div>
     );
