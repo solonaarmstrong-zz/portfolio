@@ -1,0 +1,37 @@
+.NavigationWrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #222;
+    padding: 0px 16px;
+}
+
+.Navigation {
+    max-width: 600px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    margin: auto;
+}
+
+.NavigationLink {
+    background: #222;
+    border: 0px;
+    font-size: 1rem;
+    padding: 4px 8px;
+    cursor: pointer;
+}
+
+.NavigationLink a {
+    color: white;
+    text-decoration: none;
+}
+
+.NavigationLink a:hover {
+    color: #FFB000;
+}
+
+.NavigationLink--active {
+    color: #FF7C00;
+}
