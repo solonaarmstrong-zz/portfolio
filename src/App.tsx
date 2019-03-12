@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import {Route, HashRouter} from 'react-router-dom';
 import NavigationLink from './components/NavigationLink';
 import Introduction from './components/Introduction/Introduction';
@@ -19,7 +19,7 @@ interface State {
 class App extends Component<Props, State> {
   state: State = {
     loadNavigation: false,
-  }
+  };
 
   componentDidMount() {
     setTimeout(this.handleLoadNavigation, 3000);
@@ -28,21 +28,39 @@ class App extends Component<Props, State> {
   render() {
     const {loadNavigation} = this.state;
 
-      const navigationMarkup = loadNavigation
-        ? (
-          <FadeIn duration={400}>
-            <div className="NavigationWrapper">
-              <nav className="Navigation">
-                  <NavigationLink to="/about" content="About" accessibilityLabel="About" />
-                  <NavigationLink to="/skills" content="Skills" accessibilityLabel="Skills" />
-                  <NavigationLink to="/work-history" content="Work History" accessibilityLabel="Work History" />
-                  <NavigationLink to="/education" content="Education" accessibilityLabel="Education"  />
-                  <NavigationLink to="/contact" content="Contact" accessibilityLabel="Contact" />
-              </nav>
-            </div>
-          </FadeIn>
-        )
-        : null;
+    const navigationMarkup = loadNavigation ? (
+      <FadeIn duration={400}>
+        <div className="NavigationWrapper">
+          <nav className="Navigation">
+            <NavigationLink
+              to="/about"
+              content="About"
+              accessibilityLabel="About"
+            />
+            <NavigationLink
+              to="/skills"
+              content="Skills"
+              accessibilityLabel="Skills"
+            />
+            <NavigationLink
+              to="/work-history"
+              content="Work History"
+              accessibilityLabel="Work History"
+            />
+            <NavigationLink
+              to="/education"
+              content="Education"
+              accessibilityLabel="Education"
+            />
+            <NavigationLink
+              to="/contact"
+              content="Contact"
+              accessibilityLabel="Contact"
+            />
+          </nav>
+        </div>
+      </FadeIn>
+    ) : null;
 
     return (
       <div className="App">
@@ -64,7 +82,7 @@ class App extends Component<Props, State> {
 
   handleLoadNavigation = () => {
     this.setState({loadNavigation: true});
-  }
+  };
 }
 
 export default App;

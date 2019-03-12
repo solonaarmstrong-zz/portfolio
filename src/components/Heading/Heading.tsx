@@ -5,16 +5,16 @@ import './Heading.css';
 type HeadingElement = 'h1' | 'h2' | 'h3' | 'h4';
 
 interface Props {
-    element: HeadingElement;
-    color: Color;
-    font: Font;
-    children: string;
+  element: HeadingElement;
+  color: Color;
+  font: Font;
+  children: string;
 }
 
 function Heading({element: Element = 'h2', color, font, children}: Props) {
-    const className = `Heading Heading-${color} Heading-${font}`;
+  const className = `Heading Heading-${color} Heading-${font}`;
 
-    return <Element className={className}>{children}</Element>;
+  return <Element className={className}>{children}</Element>;
 }
 
 export default Heading;

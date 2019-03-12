@@ -3,7 +3,7 @@
     text-align: left;
 }
 
-.Paragraph--narrow {
+.Paragraph--narrow { 
     width: 60%;
     max-width: 500px;
 }
