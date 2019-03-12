@@ -3,9 +3,10 @@ import Heading from '../Heading/Heading';
 import FadeIn from '../FadeIn/FadeIn';
 import FadeInScale from '../FadeInScale/FadeInScale';
 import Skeleton from '../Skeleton/Skeleton';
-import Summary from '../Summary/Summary';
+import Paragraph, { ParagraphWidth, ParagraphTextSize } from '../Paragraph/Paragraph';
 import SpacingContainer from '../SpacingContainer/SpacingContainer';
 import {Color, Font} from '../../types';
+import summaryText from '../../data/summary-text';
 
 interface Props {}
 
@@ -27,7 +28,9 @@ interface State {
         const summaryMarkup = textLoading
             ? <Skeleton alignment='Centered' />
             : <FadeIn duration={400}>
-                <Summary />
+                <Paragraph width={ParagraphWidth.Narrow} textSize={ParagraphTextSize.Large} centered>
+                  {summaryText.content}
+                </Paragraph>
               </FadeIn>;
   
         return (
