@@ -1,9 +1,10 @@
 import React from 'react';
 import {CSSTransition} from 'react-transition-group';
+import {TransitionDuration} from '../../types';
 import './FadeIn.css';
 
 interface Props {
-  duration?: number;
+  duration?: TransitionDuration;
   children: React.ReactNode;
 }
 
@@ -22,7 +23,7 @@ class FadeIn extends React.Component<Props, State> {
   }
 
   render() {
-    const {duration = 1000, children} = this.props;
+    const {duration = TransitionDuration.Slow, children} = this.props;
     const {fadeIn} = this.state;
 
     const markup = <div key="key">{children}</div>;

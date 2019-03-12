@@ -8,7 +8,7 @@ import Paragraph, {
   ParagraphTextSize,
 } from '../Paragraph/Paragraph';
 import SpacingContainer from '../SpacingContainer/SpacingContainer';
-import {Color, Font} from '../../types';
+import {Color, Font, TransitionDuration} from '../../types';
 import summaryText from '../../data/summary-text';
 
 interface Props {}
@@ -31,7 +31,7 @@ class Introduction extends Component<Props, State> {
     const summaryMarkup = textLoading ? (
       <Skeleton alignment="Centered" />
     ) : (
-      <FadeIn duration={400}>
+      <FadeIn duration={TransitionDuration.Quickest}>
         <Paragraph
           width={ParagraphWidth.Narrow}
           textSize={ParagraphTextSize.Large}
@@ -44,19 +44,19 @@ class Introduction extends Component<Props, State> {
 
     return (
       <>
-        <FadeInScale duration={400}>
+        <FadeInScale duration={TransitionDuration.Quickest}>
           <SpacingContainer space="extra-loose">
             <Heading color={Color.Blue} element="h1" font={Font.Montez}>
               Solona
             </Heading>
           </SpacingContainer>
         </FadeInScale>
-        <FadeInScale duration={600}>
+        <FadeInScale duration={TransitionDuration.Quicker}>
           <Heading color={Color.Black} element="h3" font={Font.Regular}>
             Front End Developer
           </Heading>
         </FadeInScale>
-        <FadeIn duration={800}>
+        <FadeIn duration={TransitionDuration.Quick}>
           <SpacingContainer space="extra-loose">
             {summaryMarkup}
           </SpacingContainer>
