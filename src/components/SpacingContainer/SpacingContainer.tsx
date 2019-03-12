@@ -9,7 +9,7 @@ interface Props {
 }
 
 function SpacingContainer({space = 'regular', children}: Props) {
-    return <p className={`SpacingContainer SpacingContainer--${space}`}>{children}</p>;
+    return <div className={`SpacingContainer SpacingContainer--${space}`}>{children}</div>;
 }
 
 export default SpacingContainer;
