@@ -8,6 +8,7 @@ import WorkHistory from './components/WorkHistory/WorkHistory';
 import Education from './components/Education/Education';
 import Contact from './components/Contact/Contact';
 import FadeIn from './components/FadeIn/FadeIn';
+import {TransitionDuration} from './types';
 import './App.css';
 
 interface Props {}
@@ -22,14 +23,14 @@ class App extends Component<Props, State> {
   };
 
   componentDidMount() {
-    setTimeout(this.handleLoadNavigation, 3000);
+    setTimeout(this.handleLoadNavigation, 2500);
   }
 
   render() {
     const {loadNavigation} = this.state;
 
     const navigationMarkup = loadNavigation ? (
-      <FadeIn duration={400}>
+      <FadeIn duration={TransitionDuration.Quickest}>
         <div className="NavigationWrapper">
           <nav className="Navigation">
             <NavigationLink
