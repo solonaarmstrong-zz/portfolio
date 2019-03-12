@@ -3,6 +3,7 @@ import Heading from './components/Heading/Heading';
 import Skeleton from './components/Skeleton/Skeleton';
 import FadeIn from './components/FadeIn/FadeIn';
 import FadeInScale from './components/FadeInScale/FadeInScale';
+import Paragraph, { ParagraphSize } from './components/Paragraph/Paragraph';
 import {Color, Font} from './types';
 import './App.css';
 
@@ -18,16 +19,19 @@ class App extends Component<Props, State> {
   }
 
   componentDidMount() {
-    setTimeout(this.handleLoading, 2000);
+    setTimeout(this.handleLoading, 1500);
   }
 
   render() {
     const {loading} = this.state;
     const summaryMarkup = loading
       ? <Skeleton alignment='Centered' />
-      : <FadeIn duration={400}>Hey, I'm Solona (pronounced like Barcelona).
-        Part coder and part designer with 10 years experience as a web developer.
-        I'm passionate about delightful user experience, accessibility, and performance.</FadeIn>;
+      : <FadeIn duration={400}>
+          <Paragraph size={ParagraphSize.Large} centered>Hey, I'm Solona (pronounced like Barcelona).
+            Part coder and part designer with 10 years experience as a web developer.
+            I'm passionate about delightful user experience, accessibility, and performance.
+          </Paragraph>
+        </FadeIn>;
 
     return (
       <div className="App">
