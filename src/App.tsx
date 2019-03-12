@@ -1,58 +1,69 @@
 import React, { Component } from 'react';
-import Heading from './components/Heading/Heading';
-import Skeleton from './components/Skeleton/Skeleton';
+import {Route, HashRouter} from 'react-router-dom';
+import NavigationLink from './components/NavigationLink';
+import Introduction from './components/Introduction/Introduction';
+import About from './components/About/About';
+import Skills from './components/Skills/Skills';
+import WorkHistory from './components/WorkHistory/WorkHistory';
+import Education from './components/Education/Education';
+import Contact from './components/Contact/Contact';
 import FadeIn from './components/FadeIn/FadeIn';
-import FadeInScale from './components/FadeInScale/FadeInScale';
-import Paragraph, { ParagraphSize } from './components/Paragraph/Paragraph';
-import SpacingContainer from './components/SpacingContainer/SpacingContainer';
-import {Color, Font} from './types';
 import './App.css';
 
 interface Props {}
 
 interface State {
-  loading: boolean;
+  loadNavigation: boolean;
 }
 
 class App extends Component<Props, State> {
   state: State = {
-    loading: true,
+    loadNavigation: false,
   }
 
   componentDidMount() {
-    setTimeout(this.handleLoading, 1500);
+    setTimeout(this.handleLoadNavigation, 3000);
   }
 
   render() {
-    const {loading} = this.state;
-    const summaryMarkup = loading
-      ? <Skeleton alignment='Centered' />
-      : <FadeIn duration={400}>
-          <Paragraph size={ParagraphSize.Large} centered>Hey, I'm Solona (pronounced like Barcelona).
-            Part coder and part designer with 10 years experience as a web developer.
-            I'm passionate about delightful user experience, accessibility, and performance.
-          </Paragraph>
-        </FadeIn>;
+    const {loadNavigation} = this.state;
+
+      const navigationMarkup = loadNavigation
+        ? (
+          <FadeIn duration={400}>
+            <div className="NavigationWrapper">
+              <nav className="Navigation">
+                  <NavigationLink to="/about" content="About" accessibilityLabel="About" />
+                  <NavigationLink to="/skills" content="Skills" accessibilityLabel="Skills" />
+                  <NavigationLink to="/work-history" content="Work History" accessibilityLabel="Work History" />
+                  <NavigationLink to="/education" content="Education" accessibilityLabel="Education"  />
+                  <NavigationLink to="/contact" content="Contact" accessibilityLabel="Contact" />
+              </nav>
+            </div>
+          </FadeIn>
+        )
+        : null;
 
     return (
       <div className="App">
-        <FadeInScale duration={400}>
-          <SpacingContainer space='extra-loose'>
-            <Heading color={Color.Blue} element='h1' font={Font.Montez}>Solona</Heading>
-          </SpacingContainer>
-        </FadeInScale>
-        <FadeInScale duration={600}>
-          <Heading color={Color.Black} element='h3' font={Font.Regular}>Front End Developer</Heading>
-        </FadeInScale>
-        <SpacingContainer space='extra-loose'>
-          {summaryMarkup}
-        </SpacingContainer>
+        <HashRouter>
+          <>
+            <Route exact path="/" component={Introduction} />
+            <Route exact path="/about" component={About} />
+            <Route exact path="/skills" component={Skills} />
+            <Route exact path="/work-history" component={WorkHistory} />
+            <Route exact path="/education" component={Education} />
+            <Route exact path="/contact" component={Contact} />
+
+            {navigationMarkup}
+          </>
+        </HashRouter>
       </div>
     );
   }
 
-  handleLoading = () => {
-    this.setState({loading: false});
+  handleLoadNavigation = () => {
+    this.setState({loadNavigation: true});
   }
 }
 
