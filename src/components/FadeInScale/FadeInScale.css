@@ -1,0 +1,15 @@
+.FadeInScale-enter {
+    opacity: 0.01;
+    transform: scale(0.9);
+}
+
+.FadeInScale-enter-active {
+    opacity: 0.01;
+    transform: scale(0.9);
+}
+
+.FadeInScale-enter-done {
+    opacity: 1;
+    transform: scale(1);
+    transition: opacity var(--FadeInScale-duration) ease-in, transform var(--FadeInScale-duration) ease-in;
+}

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Heading from './components/Heading/Heading';
 import Skeleton from './components/Skeleton/Skeleton';
 import FadeIn from './components/FadeIn/FadeIn';
+import FadeInScale from './components/FadeInScale/FadeInScale';
 import {Color, Font} from './types';
 import './App.css';
 
@@ -30,12 +31,12 @@ class App extends Component<Props, State> {
 
     return (
       <div className="App">
-        <FadeIn duration={400}>
+        <FadeInScale duration={400}>
           <Heading color={Color.Blue} element='h1' font={Font.Montez}>Solona</Heading>
-        </FadeIn>
-        <FadeIn duration={600}>
+        </FadeInScale>
+        <FadeInScale duration={600}>
           <Heading color={Color.Black} element='h3' font={Font.Regular}>Front End Developer</Heading>
-        </FadeIn>
+        </FadeInScale>
         {summaryMarkup}
       </div>
     );
