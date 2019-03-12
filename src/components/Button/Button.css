@@ -1,0 +1,36 @@
+.Button {
+    border-radius: 4px;
+    border: 0px;
+    box-shadow: 0px;
+    font-weight: bold;
+}
+
+.Button--small {
+    padding: 8px;
+}
+
+.Button--medium {
+    padding: 12px;
+    font-size: 1.1rem;
+}
+
+.Button--large {
+    padding: 12px 20px;
+    font-size: 1.4rem;
+}
+
+.Button--blue {
+    color: white;
+    background: #46bacf;
+}
+
+.Button--white {
+    color: black;
+    background: white;
+    border: 1px solid #aaa;
+}
+
+.Button--orange {
+    color: white;
+    background: #FF7C00;
+}
