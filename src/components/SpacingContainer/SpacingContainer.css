@@ -1,0 +1,15 @@
+.SpacingContainer--tight {
+    margin-top: 12px;
+}
+
+.SpacingContainer--regular {
+    margin-top: 20px;
+}
+
+.SpacingContainer--loose {
+    margin-top: 36px;
+}
+
+.SpacingContainer--extra-loose {
+    margin-top: 60px;
+}

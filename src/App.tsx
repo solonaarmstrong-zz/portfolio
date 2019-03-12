@@ -4,6 +4,7 @@ import Skeleton from './components/Skeleton/Skeleton';
 import FadeIn from './components/FadeIn/FadeIn';
 import FadeInScale from './components/FadeInScale/FadeInScale';
 import Paragraph, { ParagraphSize } from './components/Paragraph/Paragraph';
+import SpacingContainer from './components/SpacingContainer/SpacingContainer';
 import {Color, Font} from './types';
 import './App.css';
 
@@ -36,12 +37,16 @@ class App extends Component<Props, State> {
     return (
       <div className="App">
         <FadeInScale duration={400}>
-          <Heading color={Color.Blue} element='h1' font={Font.Montez}>Solona</Heading>
+          <SpacingContainer space='extra-loose'>
+            <Heading color={Color.Blue} element='h1' font={Font.Montez}>Solona</Heading>
+          </SpacingContainer>
         </FadeInScale>
         <FadeInScale duration={600}>
           <Heading color={Color.Black} element='h3' font={Font.Regular}>Front End Developer</Heading>
         </FadeInScale>
-        {summaryMarkup}
+        <SpacingContainer space='extra-loose'>
+          {summaryMarkup}
+        </SpacingContainer>
       </div>
     );
   }
