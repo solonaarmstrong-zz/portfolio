@@ -2,7 +2,7 @@ import React from 'react';
 import {Color, Font} from '../../types';
 import './Heading.css';
 
-type HeadingElement = 'h1' | 'h2' | 'h3' | 'h4';
+type HeadingElement = 'h1' | 'h2' | 'h3' | 'h4' | 'h5';
 
 interface Props {
   element: HeadingElement;
