@@ -23,7 +23,11 @@ class App extends Component<Props, State> {
   };
 
   componentDidMount() {
-    setTimeout(this.handleLoadNavigation, 2500);
+    if (location.hash != '#/') {
+      this.handleLoadNavigation();
+    } else {
+      setTimeout(this.handleLoadNavigation, 2500);
+    }
   }
 
   render() {
@@ -66,7 +70,7 @@ class App extends Component<Props, State> {
     return (
       <div className="App">
         <HashRouter>
-          <>
+          <main>
             <Route exact path="/" component={Introduction} />
             <Route exact path="/about" component={About} />
             <Route exact path="/skills" component={Skills} />
@@ -75,7 +79,7 @@ class App extends Component<Props, State> {
             <Route exact path="/contact" component={Contact} />
 
             {navigationMarkup}
-          </>
+          </main>
         </HashRouter>
       </div>
     );
