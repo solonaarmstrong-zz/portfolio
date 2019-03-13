@@ -1,0 +1,10 @@
+.Skill {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #f9f9f9;
+  padding: 3rem 0;
+  box-shadow: -1px -1px 3px #eaeaea;
+}

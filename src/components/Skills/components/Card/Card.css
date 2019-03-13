@@ -1,0 +1,14 @@
+.Card {
+  box-shadow: 1px 1px 5px #bbb;
+  text-align: left;
+  margin: 0 24px 24px 24px;
+}
+
+.CardTitle {
+  padding: 8px 16px;
+  border-bottom: 1px solid #eee;
+}
+
+.CardContent {
+  padding: 24px;
+}
