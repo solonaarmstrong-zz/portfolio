@@ -56,9 +56,6 @@ class Skills extends Component<Props, State> {
           <FadeIn duration={TransitionDuration.Slowest}>
             <Skill name="VSCode" />
           </FadeIn>
-        </div>
-
-        <div className="Skills">
           <FadeIn duration={TransitionDuration.Slowest}>
             <Skill name="jQuery" />
           </FadeIn>
@@ -98,25 +95,19 @@ class Skills extends Component<Props, State> {
         </div>
 
         <div className="SoftSkillsWrapper">
-          <Heading color={Color.Black} element="h3" font={Font.Regular}>
-            Soft skills
-          </Heading>
-
           <div className="SoftSkills">
             <div className="SoftSkillsColumn">
               <Card title="Resourceful">
-                If I had to choose only one trait to describe myself it would be
-                my resourcefulness. Both professionally and personally, I have
-                persevered through many challenges and found creative ways to
-                solve problems.
+                Both professionally and personally, I have persevered through
+                many challenges and found creative ways to solve problems.
               </Card>
 
-              <Card title="Focused on details">
-                I am a perfectionst who appreciates high quality, although I do
+              <Card title="Detail oriented">
+                I am a perfectionist who appreciates high quality, although I do
                 know when it's good enough for now and time to ship.
               </Card>
 
-              <Card title="Writing and editing">
+              <Card title="Writer and editer">
                 With me you get a strong set of English skills. As a writing
                 tutor in university, I helped other students with their essay
                 papers and assignments. I have written technical blog posts,
@@ -124,10 +115,12 @@ class Skills extends Component<Props, State> {
                 I'm also a strong editor and I promise I will find your typos.
               </Card>
 
-              <Card title="Communication">
-                I have worked with and facilitated a form of communication
-                called Nonviolent Communication (also known as empathic
-                communication) for over 10 years.
+              <Card title="Team player">
+                I would much rather support the team than advance myself
+                personally. I love to be helpful. I have also worked with and
+                facilitated a form of communication called Nonviolent
+                Communication (also known as empathic communication) for over 10
+                years that helps build good relationships with others.
               </Card>
             </div>
           </div>

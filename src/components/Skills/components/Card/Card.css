@@ -1,14 +1,15 @@
 .Card {
-  box-shadow: 1px 1px 5px #bbb;
+  border-radius: 16px;
+  background: white;
   text-align: left;
   margin: 0 24px 24px 24px;
+  padding: 12px;
 }
 
 .CardTitle {
-  padding: 8px 16px;
-  border-bottom: 1px solid #eee;
+  padding: 8px 24px 0 24px;
 }
 
 .CardContent {
-  padding: 24px;
+  padding: 12px 32px 32px 32px;
 }
