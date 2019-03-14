@@ -1,0 +1,39 @@
+.FadeInSlide--up-enter {
+    opacity: 0.01;
+    transform: translateY(-16px);
+}
+.FadeInSlide--up-enter-active {
+    opacity: 1;
+    transform: none;
+    transition: all var(--FadeInSlide-duration) ease-in;
+}
+
+.FadeInSlide--down-enter {
+    opacity: 0.01;
+    transform: translateY(16px);
+}
+.FadeInSlide--down-enter-active {
+    opacity: 1;
+    transform: none;
+    transition: all var(--FadeInSlide-duration) ease-in;
+}
+
+.FadeInSlide--left-enter {
+    opacity: 0.01;
+    transform: translateX(16px);
+}
+.FadeInSlide--left-enter-active {
+    opacity: 1;
+    transform: none;
+    transition: all var(--FadeInSlide-duration) ease-in;
+}
+
+.FadeInSlide--right-enter {
+    opacity: 0.01;
+    transform: translateX(-16px);
+}
+.FadeInSlide--right-enter-active {
+    opacity: 1;
+    transform: none;
+    transition: all var(--FadeInSlide-duration) ease-in;
+}

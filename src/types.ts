@@ -10,6 +10,7 @@ export enum Font {
 }
 
 export enum TransitionDuration {
+    Immediate = 100,
     Quickest = 400,
     Quicker = 600,
     Quick = 800,
@@ -17,3 +18,5 @@ export enum TransitionDuration {
     Slower = 1200,
     Slowest = 1400
 }
+
+export type SlideDirection = 'up' | 'down' | 'left' | 'right';

@@ -1,0 +1,66 @@
+.JobDetails {
+  text-align: left;
+  padding: 2rem;
+  box-sizing: border-box;
+  box-shadow: 1px 1px 10px #ddd;
+  border: 1px solid #e4e4e4;
+  background: white;
+}
+
+.JobDetails-Summary {
+  display: flex;
+  justify-content: space-between;
+}
+
+.JobDetails-Logo {
+  flex-grow: 0;
+}
+
+.JobDetails-Text {
+  flex-grow: 1;
+  margin-left: 24px;
+}
+
+.JobDetails-CompanyName {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-bottom: 12px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid black;
+}
+   
+.JobDetails-Role {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+
+.JobDetails-Description {
+  margin-top: 24px;
+}
+
+.JobDetailsOverlayWrapper-enter {
+  opacity: 0;
+  transform: scale(0);
+  border-radius: 50%;
+}
+
+.JobDetailsOverlayWrapper-enter-active {
+  opacity: 1;
+  transform: scale(1);
+  border-radius: none;
+  transition: all 400ms ease-in;
+}
+
+.JobDetailsOverlayWrapper-exit {
+  opacity: 1;
+  transform: scale(1);
+  border-radius: none;
+  transition: all 400ms ease-in;
+}
+
+.JobDetailsOverlayWrapper-exit-done {
+  opacity: 0;
+  transform: scale(1);
+  border-radius: 50%;
+}

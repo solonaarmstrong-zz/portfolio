@@ -1,0 +1,73 @@
+.WorkHistory {
+  margin-top: 48px;
+}
+
+.WorkHistory-Timeline {
+  display: grid;
+  height: 100%;
+}
+
+.JobDetailsWrapper {
+  margin-bottom: 12px;
+}
+
+@media screen and (max-width: 799px) {
+  .WorkHistory-Timeline {
+    grid-template-columns: 100%;
+    width: 100%;
+  }
+  
+  .JobDetailsWrapper {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    justify-self: start;
+    width: 100%;
+  }
+  
+  .WorkHistory-Dates {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .WorkHistory-Timeline {
+    grid-template-columns: 30% 70%;
+    width: 90%;
+    margin: auto;
+  }
+
+  .JobDetailsWrapper {
+    grid-column-gap: 24px;
+    width: 100%;
+    max-width: 700px;
+    justify-self: start;
+  }
+
+  .WorkHistory-Dates {
+    justify-self: end;
+    align-self: flex-start;
+    margin: 8px 12px 0 0;
+  }
+
+  .WorkHistory-Dates::after {
+    content: " ";
+    width: 20px;
+    height: 20px;
+    background: white;
+    position: absolute;
+    margin: 0 4px 0 8px;
+    transform: rotate(45deg);
+  }
+}
+
+.WorkHistory-Scroll {
+  display: flex;
+  width: 100%;
+  max-width: 100%;
+}
+
+.WorkHistory-JobLogo {
+  width: 300px;
+  height: 300px;
+  border: 1px solid white;
+}
