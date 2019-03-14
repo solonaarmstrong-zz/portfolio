@@ -11,7 +11,7 @@ interface Props {
 function Card({title, children}: Props) {
   const titleMarkup = title ? (
     <div className="CardTitle">
-      <Heading element="h5" color={Color.Black} font={Font.Regular}>
+      <Heading element="h3" color={Color.Black} font={Font.Regular}>
         {title}
       </Heading>
     </div>
