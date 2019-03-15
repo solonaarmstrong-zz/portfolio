@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
 import Image, {ImageSize} from '../../../Image/Image';
-import JobDetailsOverlay from '../JobDetailsOverlay/JobDetailsOverlay';
 import {CSSTransition} from 'react-transition-group';
 import {TransitionDuration} from '../../../../types';
+import JobDescription from '../JobDescription/JobDescription';
 import Button from '../../../Button/Button';
 import './JobDetails.css';
 
@@ -35,19 +35,14 @@ class JobDetails extends Component<Props, State> {
     ) : null;
 
     const jobDetailsOverlayMarkup = (
-      <JobDetailsOverlay
-        backgroundColor="#95bf44"
-        textColor="black"
-        open={open}
-        onClick={this.toggleOverlay}
-      >
-        <>
-          <div className="JobDetails-CompanyName">{companyName}</div>
-          <div className="JobDetails-Role">{role}</div>
-          <ul>{description.map(this.renderDescriptionItems)}</ul>
-        </>
-      </JobDetailsOverlay>
+      <JobDescription open={open}>
+        <ul>{description.map(this.renderDescriptionItems)}</ul>
+      </JobDescription>
     );
+
+    const buttonsMarkup = buttons ? (
+      <div className="JobDetails-Links">{buttons}</div>
+    ) : null;
 
     return (
       <div className="JobDetails">
@@ -58,21 +53,21 @@ class JobDetails extends Component<Props, State> {
             <div className="JobDetails-Role">{role}</div>
             <div className="JobDetails-Buttons">
               <Button
-                content="Details"
+                content="What I did"
                 size="small"
                 color="white"
                 onClick={this.toggleOverlay}
               />
-              {buttons}
+              {buttonsMarkup}
             </div>
+            <CSSTransition
+              in={open}
+              timeout={TransitionDuration.Quickest}
+              classNames="JobDetails-Description"
+            >
+              {jobDetailsOverlayMarkup}
+            </CSSTransition>
           </div>
-          <CSSTransition
-            in={open}
-            timeout={TransitionDuration.Quickest}
-            classNames="JobDetailsOverlayWrapper"
-          >
-            {jobDetailsOverlayMarkup}
-          </CSSTransition>
         </div>
       </div>
     );

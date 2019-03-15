@@ -40,8 +40,7 @@ class WorkHistory extends Component<Props, State> {
               href="https://engineering.shopify.com/blogs/engineering/building-data-table-component-react"
               target="_blank"
             >
-              Shopify Engineering Blog{' '}
-              <FontAwesomeIcon icon="external-link-alt" />
+              Blog Article <FontAwesomeIcon icon="external-link-alt" />
             </a>
           </>
         ) : null;

@@ -39,36 +39,37 @@
   margin-top: 24px;
 }
 
-.JobDetailsOverlayWrapper-enter {
+.JobDetails-Description-enter {
   opacity: 0;
-  transform: scale(0);
-  border-radius: 50%;
+  transform: scaleX(0);
 }
 
-.JobDetailsOverlayWrapper-enter-active {
+.JobDetails-Description-enter-active {
   opacity: 1;
-  transform: scale(1);
-  border-radius: none;
-  transition: all 400ms ease-in;
+  transform: scaleX(1);
+  transition: all 600ms ease-in;
 }
 
-.JobDetailsOverlayWrapper-exit {
+.JobDetails-Description-exit {
   opacity: 1;
-  transform: scale(1);
-  border-radius: none;
-  transition: all 400ms ease-in;
+  transform: scaleX(1);
 }
 
-.JobDetailsOverlayWrapper-exit-done {
+.JobDetails-Description-exit-done {
   opacity: 0;
-  transform: scale(1);
-  border-radius: 50%;
+  transform: scaleX(0);
+  transition: all 600ms ease-in;
+}
+
+.JobDetails-Buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-items: center;
 }
 
 .JobDetails a {
   text-decoration: none;
   padding: 8px;
-  margin-left: 12px;
   font-family: 'Nanum Gothic';
   font-size: 0.9rem;
   font-weight: bold;
@@ -80,4 +81,27 @@
 
 .JobDetails a:hover {
   background: #eee;
+}
+
+.JobDetails-Links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+}
+
+@media screen and (max-width: 499px) {
+  .JobDetails-Buttons, .JobDetails-Links {
+    flex-direction: column;
+  }
+  
+  .JobDetails-Links a {
+    margin-top: 8px;
+  }
+}
+
+@media screen and (min-width: 500px) {
+  .JobDetails-Links a {
+    margin-left: 8px;
+  }
 }
