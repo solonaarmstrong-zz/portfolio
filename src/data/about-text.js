@@ -8,6 +8,8 @@ const summaryText = {
   like teaching and writing, that have all contributed to my value as a developer.`,
   `I'm meticulous about details and appreciate high quality, both on screen and in code.
   Having an impact motivates me, so I always give 100%.`,
+  `Colleagues often tell me how much they enjoy working with me. I'm friendly and like to
+  be helpful. I also make shameless puns and laugh at my own jokes.`
   ]
 }
 
