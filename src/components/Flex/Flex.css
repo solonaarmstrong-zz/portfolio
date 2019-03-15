@@ -1,0 +1,77 @@
+.Flex {
+  display: flex;
+}
+
+.Flex-FlexDirection--row {
+  flex-direction: row;
+}
+.Flex-FlexDirection--row-reverse {
+  flex-direction: row-reverse;
+}
+.Flex-FlexDirection--column {
+  flex-direction: column;
+}
+.Flex-FlexDirection--column-reverse {
+  flex-direction: column-reverse;
+}
+
+.Flex-FlexWrap--nowrap {
+  flex-wrap: nowrap;
+}
+.Flex-FlexWrap--wrap {
+  flex-wrap: wrap;
+}
+
+.Flex-JustifyContent--flex-start {
+  justify-content: flex-start;
+}
+.Flex-JustifyContent--flex-end {
+  justify-content: flex-end;
+}
+.Flex-JustifyContent--center {
+  justify-content: center;
+}
+.Flex-JustifyContent--space-between {
+  justify-content: space-between;
+}
+.Flex-JustifyContent--space-around {
+  justify-content: space-around;
+}
+.Flex-JustifyContent--space-evenly {
+  justify-content: space-evenly;
+}
+
+.Flex-AlignItems--flex-start {
+  align-items: flex-start;
+}
+.Flex-AlignItems--flex-end {
+  align-items: flex-end;
+}
+.Flex-AlignItems--center {
+  align-items: center;
+}
+.Flex-AlignItems--stretch {
+  align-items: stretch;
+}
+.Flex-AlignItems--baseline {
+  align-items: baseline;
+}
+
+.Flex-AlignContent--flex-start {
+  align-content: flex-start;
+}
+.Flex-AlignContent--flex-end {
+  align-content: flex-end;
+}
+.Flex-AlignContent--center {
+  align-content: center;
+}
+.Flex-AlignContent--stretch {
+  align-content: stretch;
+}
+.Flex-AlignContent--space-between {
+  align-content: space-between;
+}
+.Flex-AlignContent--space-around {
+  align-content: space-around;
+}

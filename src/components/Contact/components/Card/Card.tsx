@@ -1,6 +1,6 @@
 import React from 'react';
-import Heading from '../Heading/Heading';
-import {Color, Font} from '../../types';
+import Heading from '../../../Heading/Heading';
+import {Color, Font} from '../../../../types';
 import './Card.css';
 
 interface Props {

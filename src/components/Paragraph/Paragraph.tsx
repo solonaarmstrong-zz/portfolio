@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {ReactHTML} from 'react';
 import './Paragraph.css';
 
 export enum ParagraphWidth {
@@ -16,7 +16,7 @@ interface Props {
   width?: ParagraphWidth;
   textSize?: ParagraphTextSize;
   centered?: boolean;
-  children: string;
+  children: React.ReactNode;
 }
 
 function Paragraph({

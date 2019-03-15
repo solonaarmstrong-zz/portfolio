@@ -1,0 +1,68 @@
+.ContactWrapper {
+  width: 100%;
+}
+
+.Contact {
+  margin-top: 48px;
+  width: 100%;
+}
+
+.Contact a,
+.Contact a:link,
+.Contact a:visited {
+  color: black;
+  text-decoration: none;
+  border-bottom: 2px solid white;
+}
+
+.Contact a:hover,
+.Contact a:focus,
+.Contact a:active {
+  border-bottom: 2px solid black;
+}
+
+.Contact a.none,
+.Contact a.none:link,
+.Contact a.none:visited,
+.Contact a.none:hover,
+.Contact a.none:focus,
+.Contact a.none:active {
+  color: black;
+  text-decoration: none;
+  border: none;
+}
+
+.Contact-Content {
+  display: grid;
+}
+
+@media screen and (max-width: 799px) {
+  .Contact-Content {
+    grid-template-columns: 100%;
+  }
+
+  .Contact-Content-LeftInner {
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .Contact-Content {
+    grid-template-columns: repeat(2, 50%);
+    align-items: center;
+  }
+
+  .Contact {
+    margin: 48px auto 0 auto;
+  }
+
+  .Contact-Content-LeftInner {
+    text-align: left;
+    max-width: 350px;
+    margin: auto;
+  }
+}
+
+.spaced {
+  margin-right: 8px;
+}

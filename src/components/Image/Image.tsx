@@ -6,6 +6,7 @@ export enum ImageSize {
   ExtraSmall = 'extraSmall',
   Small = 'small',
   Medium = 'medium',
+  Large = 'large',
   Full = 'full',
 }
 
