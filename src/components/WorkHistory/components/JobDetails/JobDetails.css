@@ -64,3 +64,20 @@
   transform: scale(1);
   border-radius: 50%;
 }
+
+.JobDetails a {
+  text-decoration: none;
+  padding: 8px;
+  margin-left: 12px;
+  font-family: 'Nanum Gothic';
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: black;
+  background: white;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+}
+
+.JobDetails a:hover {
+  background: #eee;
+}

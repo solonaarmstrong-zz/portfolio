@@ -25,7 +25,7 @@ class JobDetails extends Component<Props, State> {
   };
 
   render() {
-    const {companyName, role, description, imageSrc} = this.props;
+    const {companyName, role, description, imageSrc, buttons} = this.props;
     const {open} = this.state;
 
     const logoMarkup = imageSrc ? (
@@ -60,11 +60,10 @@ class JobDetails extends Component<Props, State> {
               <Button
                 content="Details"
                 size="small"
-                color="yellow"
+                color="white"
                 onClick={this.toggleOverlay}
               />
-              <Button content="GitHub" size="small" color="white" />
-              <Button content="GitHub" size="small" color="white" />
+              {buttons}
             </div>
           </div>
           <CSSTransition
