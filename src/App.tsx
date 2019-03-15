@@ -5,7 +5,6 @@ import Introduction from './components/Introduction/Introduction';
 import About from './components/About/About';
 import Skills from './components/Skills/Skills';
 import WorkHistory from './components/WorkHistory/WorkHistory';
-import Education from './components/Education/Education';
 import Contact from './components/Contact/Contact';
 import FadeIn from './components/FadeIn/FadeIn';
 import {TransitionDuration} from './types';
@@ -53,11 +52,6 @@ class App extends Component<Props, State> {
               accessibilityLabel="Work History"
             />
             <NavigationLink
-              to="/education"
-              content="Education"
-              accessibilityLabel="Education"
-            />
-            <NavigationLink
               to="/contact"
               content="Contact"
               accessibilityLabel="Contact"
@@ -75,7 +69,6 @@ class App extends Component<Props, State> {
             <Route exact path="/about" component={About} />
             <Route exact path="/skills" component={Skills} />
             <Route exact path="/work-history" component={WorkHistory} />
-            <Route exact path="/education" component={Education} />
             <Route exact path="/contact" component={Contact} />
 
             {navigationMarkup}
