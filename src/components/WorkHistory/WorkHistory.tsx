@@ -30,7 +30,10 @@ class WorkHistory extends Component<Props, State> {
       const buttons =
         index == 0 ? (
           <>
-            <a href="https://github.com/solonaarmstrong" target="_blank">
+            <a
+              href="https://github.com/Shopify/polaris-react/pulls?utf8=%E2%9C%93&q=is%3Apr+author%3Asolonaarmstrong"
+              target="_blank"
+            >
               GitHub <FontAwesomeIcon icon="external-link-alt" />
             </a>
             <a
