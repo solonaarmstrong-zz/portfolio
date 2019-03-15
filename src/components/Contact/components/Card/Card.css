@@ -1,0 +1,26 @@
+.Card {
+  box-shadow: 1px 1px 3px #ddd;
+  background: white;
+  width: 100%;
+  text-align: left;
+  display: grid;
+}
+
+@media screen and (max-width: 799px) {
+  .CardContent {
+    width: 100%;
+    max-width: 799px;
+    padding: 24px 0 0 0;
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .CardContent {
+    padding: 12px;
+    width: 100%;
+    max-width: 900px;
+    margin: auto;
+    text-align: left;
+  }
+}

@@ -1,30 +1,30 @@
 .Paragraph {
-    margin: auto;
-    text-align: left;
+  margin: 0 auto 8px auto;
+  text-align: left;
 }
 
-.Paragraph--narrow { 
-    width: 60%;
-    max-width: 500px;
+.Paragraph--narrow {
+  width: 60%;
+  max-width: 500px;
 }
 
 .Paragraph--wide {
-    width: 80%;
-    max-width: 700px;
+  width: 80%;
+  max-width: 700px;
 }
 
 .Paragraph--small {
-    font-size: 1rem;
+  font-size: 1rem;
 }
 
 .Paragraph--medium {
-    font-size: 1.2rem;
+  font-size: 1.2rem;
 }
 
 .Paragraph--large {
-    font-size: 1.4rem;
+  font-size: 1.4rem;
 }
 
 .Paragraph--centered {
-    text-align: center;
+  text-align: center;
 }
