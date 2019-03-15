@@ -3,10 +3,12 @@
     border: 0px;
     box-shadow: 0px;
     font-weight: bold;
+    cursor: pointer;
 }
 
 .Button--small {
     padding: 8px;
+    font-size: 0.9rem;
 }
 
 .Button--medium {
@@ -24,9 +26,20 @@
     background: #46bacf;
 }
 
+.Button--blue:hover {
+    color: white;
+    background: #34acc1;
+}
+
 .Button--white {
     color: black;
     background: white;
+    border: 1px solid #aaa;
+}
+
+.Button--white:hover {
+    color: black;
+    background: #eee;
     border: 1px solid #aaa;
 }
 

@@ -2,7 +2,7 @@ import React from 'react';
 import './Button.css';
 
 export type ButtonSize = 'small' | 'medium' | 'large';
-export type ButtonColor = 'blue' | 'white' | 'orange';
+export type ButtonColor = 'blue' | 'white' | 'yellow';
 
 interface Props {
   size?: ButtonSize;
