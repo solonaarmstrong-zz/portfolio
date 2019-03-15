@@ -3,6 +3,7 @@ import FadeIn from '../FadeIn/FadeIn';
 import Heading from '../Heading/Heading';
 import Image from '../Image/Image';
 import Flex from '../Flex/Flex';
+import SocialIcon from './components/SocialIcon/SocialIcon';
 import Card from './components/Card/Card';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {library} from '@fortawesome/fontawesome-svg-core';
@@ -11,8 +12,9 @@ import {
   faPhone,
   faAt,
   faEnvelope,
+  faCamera,
 } from '@fortawesome/free-solid-svg-icons';
-library.add(faBriefcase, faPhone, faAt, faEnvelope);
+library.add(faBriefcase, faPhone, faAt, faEnvelope, faCamera);
 import {Color, Font, TransitionDuration} from '../../types';
 import {ImageSize} from '../Image/Image';
 import './Contact.css';
@@ -103,6 +105,84 @@ class Contact extends Component<Props, State> {
                           Download my resume
                         </a>
                       </Flex>
+                      <Flex alignItems="center" justifyContent={justifyContent}>
+                        <a
+                          href="/files/SolonaArmstrong-Portfolio.pdf"
+                          target="_blank"
+                          className="none"
+                        >
+                          <FontAwesomeIcon
+                            icon={faCamera}
+                            size="1x"
+                            className="spaced"
+                          />
+                        </a>
+                        <a
+                          href="/files/SolonaArmstrong-Portfolio.pdf"
+                          target="_blank"
+                        >
+                          Download my portfolio
+                        </a>
+                      </Flex>
+                      <SpacingContainer>
+                        <Flex
+                          flexDirection="row"
+                          justifyContent={justifyContent}
+                        >
+                          <a
+                            href="https://www.linkedin.com/in/solona"
+                            target="_blank"
+                            className="none"
+                          >
+                            <SocialIcon>
+                              <Image
+                                src="/images/LinkedIn.svg"
+                                size={ImageSize.SmallIcon}
+                                alt="Solona on LinkedIn"
+                              />
+                            </SocialIcon>
+                          </a>
+                          <a
+                            href="https://github.com/solonaarmstrong"
+                            target="_blank"
+                            className="none"
+                          >
+                            <SocialIcon>
+                              <Image
+                                src="/images/GitHub.svg"
+                                size={ImageSize.SmallIcon}
+                                alt="Solona on GitHub"
+                              />
+                            </SocialIcon>
+                          </a>
+                          <a
+                            href="https://twitter.com/solonaarmstrong"
+                            target="_blank"
+                            className="none"
+                          >
+                            <SocialIcon>
+                              <Image
+                                src="/images/Twitter.svg"
+                                size={ImageSize.SmallIcon}
+                                alt="Solona on Twitter"
+                              />
+                            </SocialIcon>
+                          </a>
+                          <a
+                            href="https://codepen.io/solona"
+                            target="_blank"
+                            className="none"
+                          >
+                            <SocialIcon>
+                              <Image
+                                src="/images/Codepen.svg"
+                                size={ImageSize.SmallIcon}
+                                alt="Solona on CodePen"
+                              />
+                            </SocialIcon>
+                          </a>
+                        </Flex>
+                      </SpacingContainer>
                     </SpacingContainer>
                   </FadeIn>
                 </div>

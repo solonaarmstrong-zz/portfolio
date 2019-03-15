@@ -1,0 +1,16 @@
+.SocialIcon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background: #ddd;
+  margin-right: 8px;
+  padding: 8px;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+
+.SocialIcon:hover {
+  background: #ffb000;
+}

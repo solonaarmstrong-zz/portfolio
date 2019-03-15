@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import './Image.css';
 
 export enum ImageSize {
+  SmallIcon = 'smallIcon',
   Icon = 'icon',
   ExtraSmall = 'extraSmall',
   Small = 'small',
