@@ -3,8 +3,12 @@ import Heading from '../Heading/Heading';
 import FadeIn from '../FadeIn/FadeIn';
 import JobDetails from './components/JobDetails/JobDetails';
 import workHistoryText from '../../data/work-history-text';
-import './WorkHistory.css';
 import {Color, Font, TransitionDuration} from '../../types';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import {library} from '@fortawesome/fontawesome-svg-core';
+import {faExternalLinkAlt} from '@fortawesome/free-solid-svg-icons';
+library.add(faExternalLinkAlt);
+import './WorkHistory.css';
 
 interface Props {}
 interface State {
@@ -23,6 +27,22 @@ class WorkHistory extends Component<Props, State> {
     const jobDetailsMarkup = jobs.map((job: string, index: number) => {
       const imgPrefix = '/images/';
 
+      const buttons =
+        index == 0 ? (
+          <>
+            <a href="https://github.com/solonaarmstrong" target="_blank">
+              GitHub <FontAwesomeIcon icon="external-link-alt" />
+            </a>
+            <a
+              href="https://engineering.shopify.com/blogs/engineering/building-data-table-component-react"
+              target="_blank"
+            >
+              Shopify Engineering Blog{' '}
+              <FontAwesomeIcon icon="external-link-alt" />
+            </a>
+          </>
+        ) : null;
+
       return (
         <div className="WorkHistory-Timeline" key={index}>
           <div className="WorkHistory-Dates" key={index}>
@@ -35,6 +55,7 @@ class WorkHistory extends Component<Props, State> {
               role={historyText[job].role}
               description={historyText[job].descriptionItems}
               imageSrc={`${imgPrefix}${historyText[job].image}`}
+              buttons={buttons}
               key={index}
             />
           </div>
