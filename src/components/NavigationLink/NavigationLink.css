@@ -1,0 +1,67 @@
+.NavigationWrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #222;
+  height: 48px;
+}
+
+.Navigation--desktop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  margin: auto;
+}
+
+.NavigationLink {
+  background: #222;
+  border: 0px;
+  height: 48px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.NavigationLink a {
+  color: white;
+  text-decoration: none;
+  padding-bottom: 11px;
+}
+
+.NavigationLink a:hover {
+  color: #ffb000;
+}
+
+.active,
+.active:hover,
+.active:active,
+.active:focus {
+  border-bottom: 3px solid #ffb000;
+}
+
+@media screen and (max-width: 599px) {
+  .Navigation--desktop {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 600px) and (max-width: 799px) {
+  .Navigation--desktop {
+    max-width: 400px;
+  }
+
+  .Navigation--small {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .Navigation--desktop {
+    max-width: 600px;
+  }
+
+  .Navigation--small {
+    display: none;
+  }
+}

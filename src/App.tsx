@@ -1,12 +1,13 @@
 import React, {Component} from 'react';
 import {Route, HashRouter} from 'react-router-dom';
-import NavigationLink from './components/NavigationLink';
+import NavigationLink from './components/NavigationLink/NavigationLink';
 import Introduction from './components/Introduction/Introduction';
 import About from './components/About/About';
 import Skills from './components/Skills/Skills';
 import WorkHistory from './components/WorkHistory/WorkHistory';
 import Contact from './components/Contact/Contact';
 import FadeIn from './components/FadeIn/FadeIn';
+import HamburgerMenu from './components/HamburgerMenu/HamburgerMenu';
 import {TransitionDuration} from './types';
 import './App.css';
 
@@ -32,32 +33,39 @@ class App extends Component<Props, State> {
   render() {
     const {loadNavigation} = this.state;
 
+    const navigationItems = (
+      <>
+        <NavigationLink
+          to="/about"
+          content="About"
+          accessibilityLabel="About"
+        />
+        <NavigationLink
+          to="/skills"
+          content="Skills"
+          accessibilityLabel="Skills"
+        />
+        <NavigationLink
+          to="/work-history"
+          content="Work History"
+          accessibilityLabel="Work History"
+        />
+        <NavigationLink
+          to="/contact"
+          content="Contact"
+          accessibilityLabel="Contact"
+        />
+      </>
+    );
+
     const navigationMarkup = loadNavigation ? (
       <FadeIn duration={TransitionDuration.Quickest}>
-        <div className="NavigationWrapper">
-          <nav className="Navigation">
-            <NavigationLink
-              to="/about"
-              content="About"
-              accessibilityLabel="About"
-            />
-            <NavigationLink
-              to="/skills"
-              content="Skills"
-              accessibilityLabel="Skills"
-            />
-            <NavigationLink
-              to="/work-history"
-              content="Work History"
-              accessibilityLabel="Work History"
-            />
-            <NavigationLink
-              to="/contact"
-              content="Contact"
-              accessibilityLabel="Contact"
-            />
-          </nav>
-        </div>
+        <nav className="NavigationWrapper">
+          <div className="Navigation--desktop">{navigationItems}</div>
+          <div className="Navigation--small">
+            <HamburgerMenu>{navigationItems}</HamburgerMenu>
+          </div>
+        </nav>
       </FadeIn>
     ) : null;
 
