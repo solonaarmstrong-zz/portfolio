@@ -24,10 +24,6 @@ class HamburgerMenu extends Component<Props, State> {
     const {children} = this.props;
     const {open} = this.state;
 
-    const underlay = open ? (
-      <div className="MenuUnderlay" onClick={this.toggleMenu} />
-    ) : null;
-
     return (
       <div className="HamburgerMenu">
         <button className="ToggleMenu" onClick={this.toggleMenu}>
@@ -43,7 +39,14 @@ class HamburgerMenu extends Component<Props, State> {
             {children}
           </div>
         </CSSTransition>
-        {underlay}
+        <CSSTransition
+          in={open}
+          timeout={TransitionDuration.Immediate}
+          classNames="Underlay"
+          unmountOnExit
+        >
+       <div className="MenuUnderlay" onClick={this.toggleMenu} />
+        </CSSTransition>
       </div>
     );
   }
