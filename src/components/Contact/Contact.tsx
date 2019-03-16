@@ -45,8 +45,6 @@ class Contact extends Component<Props, State> {
 
     const justifyContent = smallScreen ? 'center' : 'flex-start';
 
-    console.log(smallScreen);
-
     return (
       <section className="ContactWrapper">
         <FadeIn duration={TransitionDuration.Quickest}>
