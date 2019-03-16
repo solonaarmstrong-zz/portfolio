@@ -1,5 +1,4 @@
 .JobDetails {
-  text-align: left;
   padding: 2rem;
   box-sizing: border-box;
   box-shadow: 1px 1px 10px #ddd;
@@ -91,6 +90,22 @@
 }
 
 @media screen and (max-width: 499px) {
+  .JobDetails-Summary {
+    flex-direction: column;
+  }
+
+  .JobDetails {
+    text-align: center;
+  }
+
+  .JobDetails-Text {
+    align-items: center;
+  }
+
+  .JobDetails-Logo {
+    margin-bottom: 16px;
+  }
+
   .JobDetails-Buttons, .JobDetails-Links {
     flex-direction: column;
   }
@@ -98,9 +113,18 @@
   .JobDetails-Links a {
     margin-top: 8px;
   }
+
+  .JobDetails-Text {
+    margin-left: 0;
+    
+  }
 }
 
 @media screen and (min-width: 500px) {
+  .JobDetails {
+    text-align: left;
+  }
+
   .JobDetails-Links a {
     margin-left: 8px;
   }
