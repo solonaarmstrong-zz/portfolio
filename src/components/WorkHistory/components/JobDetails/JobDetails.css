@@ -94,12 +94,14 @@
     flex-direction: column;
   }
 
-  .JobDetails {
+  .JobDetails-CompanyName,
+  .JobDetails-Role {
     text-align: center;
   }
 
   .JobDetails-Text {
     align-items: center;
+    margin-left: 0;
   }
 
   .JobDetails-Logo {
@@ -114,9 +116,12 @@
     margin-top: 8px;
   }
 
-  .JobDetails-Text {
-    margin-left: 0;
-    
+  .JobDescription-Content {
+    text-align: left;
+  }
+
+  .JobDescription-Content ul {
+    padding-inline-start: 20px;
   }
 }
 
